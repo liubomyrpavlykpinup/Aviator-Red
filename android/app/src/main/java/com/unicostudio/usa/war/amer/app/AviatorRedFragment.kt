@@ -10,7 +10,7 @@ import androidx.fragment.app.replace
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.unicostudio.usa.war.amer.AviatorPurpleDatabase
+import com.unicostudio.usa.war.amer.AviatorRedDatabase
 import com.unicostudio.usa.war.amer.MainActivity
 import com.unicostudio.usa.war.amer.PlaneInfoStore
 import com.unicostudio.usa.war.amer.R
@@ -28,7 +28,7 @@ class AviatorRedFragment : Fragment() {
 
     private val viewModel by viewModels<AviatorPurpleViewModel> {
         object : ViewModelProvider.Factory {
-            val database = AviatorPurpleDatabase.getInstance(requireContext())
+            val database = AviatorRedDatabase.getInstance(requireContext())
 
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
                 @Suppress("UNCHECKED_CAST")

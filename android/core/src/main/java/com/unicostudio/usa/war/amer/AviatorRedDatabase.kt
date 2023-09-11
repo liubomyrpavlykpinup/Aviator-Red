@@ -30,14 +30,14 @@ interface PlaneInfoDao {
 }
 
 @Database(entities = [PlaneInfo::class], version = 1)
-abstract class AviatorPurpleDatabase : RoomDatabase() {
+abstract class AviatorRedDatabase : RoomDatabase() {
 
     abstract fun planeInfoDao(): PlaneInfoDao
 
     companion object {
 
         fun getInstance(appContext: Context) = Room
-            .databaseBuilder(appContext, AviatorPurpleDatabase::class.java, "planes-db")
+            .databaseBuilder(appContext, AviatorRedDatabase::class.java, "planes-db")
             .build()
     }
 }

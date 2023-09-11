@@ -43,6 +43,7 @@ class StarterActivity : AppCompatActivity() {
         Intent(this, IntentConfigurationService::class.java).also { intent ->
             bindService(intent, connection, Context.BIND_AUTO_CREATE)
         }
+        viewModel.setEvent(StarterEvent.Started(context = configurationService))
 
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.CREATED) {

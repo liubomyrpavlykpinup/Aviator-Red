@@ -1,0 +1,87 @@
+{
+  "android": true,
+  "name_generation_mode": "ADAPTIVE",
+  "exclude_libs": false,
+  "no_compress": true,
+  "no_watermark": true,
+  "remove_empty_directories": false,
+  "exclude": [
+    "**/R$*",
+    "**/R",
+    "com.unicostudio.usa.war.amer.starter.StarterActivity"
+  ],
+  "include": [],
+  "tasks": {
+    "references": {
+      "enabled": false,
+      "mode": "reflection",
+      "ignore_methods": false,
+      "ignore_fields": false,
+      "force_encrypt_unresolved": false
+    },
+    "strings": {
+      "enabled": true,
+      "mode": "compatibility",
+      "min_length": "5"
+    },
+    "flow": {
+      "enabled": false,
+      "heavy": false
+    },
+    "rename": {
+      "enabled": false,
+      "default_package": "b",
+      "keep_class_names": false,
+      "keep_local_vars": false,
+      "remove_serial_version_ids": false,
+      "rename_main_classes": false,
+      "exclude_enum_names": false
+    },
+    "scramble": {
+      "enabled": true
+    },
+    "cover-instantiation": {
+      "enabled": false
+    },
+    "numbers": {
+      "enabled": false
+    },
+    "shuffle": {
+      "enabled": false
+    },
+    "access-generalize": {
+      "enabled": false
+    },
+    "crash": {
+      "enabled": false,
+      "keep_class_debug": false,
+      "no_archive_crashing": false
+    },
+    "anti-debug": {
+      "enabled": false,
+      "check_noverify": false
+    },
+    "encrypt-stacktrace": {
+      "enabled": false,
+      "key": "zSdgF0pBbZbLPo4L"
+    },
+    "debug-remover": {
+      "enabled": false,
+      "keep_stacktrace_info": false,
+      "remove_annotations": false,
+      "keep_local_vars": false,
+      "keep_signatures": false
+    },
+    "generify": {
+      "enabled": false,
+      "keep_fields": false,
+      "keep_methods": false,
+      "keep_int_types": false,
+      "no_extra_int_inherit": false
+    },
+    "trimmer": {
+      "enabled": false,
+      "remove_methods": false
+    }
+  }
+}

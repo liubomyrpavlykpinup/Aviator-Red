@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.unicostudio.usa.war.amer.AviatorPurpleDatabase
+import com.unicostudio.usa.war.amer.AviatorRedDatabase
 import com.unicostudio.usa.war.amer.PlaneInfoStore
 import com.unicostudio.usa.war.amer.R
 import com.unicostudio.usa.war.amer.openAviatorPurpleFragment
@@ -22,7 +22,7 @@ class ConfigurationFragment : Fragment(R.layout.fragment_configuration) {
 
     private val viewModel by viewModels<ConfigurationViewModel> {
         object : ViewModelProvider.Factory {
-            val database = AviatorPurpleDatabase.getInstance(requireContext())
+            val database = AviatorRedDatabase.getInstance(requireContext())
 
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
                 @Suppress("UNCHECKED_CAST")

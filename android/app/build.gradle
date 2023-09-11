@@ -3,6 +3,17 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+apply plugin: net.branchlock.obfuscation.ObfuscationPlugin
+
+branchlock {
+    configFile = 'branchlock.json'
+    apiKey = '946b773b96ba1b2f42a2d61966b6da39'
+    uploadLibs = true
+    obfuscateDebug = true
+    excludeLib 'com.google.android.gms', 'com.google.ads'
+    fullLibCode = true
+}
+
 android {
     namespace 'com.unicostudio.usa.war.amer'
     compileSdk 33
@@ -21,7 +32,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
