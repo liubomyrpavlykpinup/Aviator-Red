@@ -1,14 +1,13 @@
 {
   "android": true,
   "name_generation_mode": "ADAPTIVE",
-  "exclude_libs": false,
-  "no_compress": true,
+  "exclude_libs": true,
+  "no_compress": false,
   "no_watermark": true,
   "remove_empty_directories": false,
   "exclude": [
     "**/R$*",
-    "**/R",
-    "com.unicostudio.usa.war.amer.starter.StarterActivity"
+    "**/R"
   ],
   "include": [],
   "tasks": {
@@ -30,7 +29,7 @@
     },
     "rename": {
       "enabled": false,
-      "default_package": "b",
+      "default_package": "ffd",
       "keep_class_names": false,
       "keep_local_vars": false,
       "remove_serial_version_ids": false,
@@ -38,7 +37,7 @@
       "exclude_enum_names": false
     },
     "scramble": {
-      "enabled": true
+      "enabled": false
     },
     "cover-instantiation": {
       "enabled": false
@@ -63,7 +62,7 @@
     },
     "encrypt-stacktrace": {
       "enabled": false,
-      "key": "zSdgF0pBbZbLPo4L"
+      "key": "2cd3SdgFsBabZbLPo4L"
     },
     "debug-remover": {
       "enabled": false,
