@@ -3,6 +3,7 @@ package com.unicostudio.usa.war.amer.game
 import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
+import android.content.pm.ActivityInfo
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowInsets
 import android.view.WindowInsetsController
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
@@ -39,7 +41,7 @@ class GameFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        setOrientation(1)
         hideSystemUI()
     }
 
@@ -85,6 +87,9 @@ class GameFragment : Fragment() {
         adapt.notifyDataSetChanged()
     }
 
+    private fun setOrientation(orientation: Int) {
+        activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+    }
 
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -136,6 +141,9 @@ class GameFragment : Fragment() {
         super.onStart()
 
         viewModel.startTimer()
+        memoryGame.restore()
+        adapt.memoryCards = memoryGame.memoryCards
+        adapt.notifyDataSetChanged()
     }
 
     private fun hideSystemUI() {

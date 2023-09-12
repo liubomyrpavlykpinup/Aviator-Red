@@ -74,6 +74,12 @@ class MemoryGame {
 
     fun restore() {
         memoryCards.shuffled()
+
+        numPairsFound = 0
+        memoryCards.forEach {
+            it.facedUp = false
+            it.matched = false
+        }
     }
 
 }
