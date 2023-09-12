@@ -11,6 +11,6 @@ class AviatorRedApp : Application() {
         super.onCreate()
 
         val initializer: EngineInitializer = GameEngineInitializer()
-//        initializer.initialize(this)
+        initializer.initialize(this)
     }
 }
